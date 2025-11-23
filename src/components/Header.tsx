@@ -169,12 +169,12 @@ export default function Header() {
             <div className="fr-header__brand fr-enlarge-link">
               <div className="fr-header__brand-top">
                 <div className="fr-header__logo">
-                  <Link href="/" className="block w-[360px] md:w-[480px] lg:w-[560px]">
+                  <Link href="/" className="block w-[400px] md:w-[520px] lg:w-[600px]">
                     <Image
                       src="/logo.png"
                       alt="Logo"
-                      width={560}
-                      height={91}
+                      width={600}
+                      height={98}
                       className="object-contain my-[5px] w-full h-auto"
                       priority
                     />
