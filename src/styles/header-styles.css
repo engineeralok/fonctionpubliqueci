@@ -5,51 +5,19 @@
    to work properly. Include this CSS file in your project.
    ============================================ */
 
-/* Legacy header skin */
 .fr-header {
   background-color: #ffffff;
-  color: #293340;
-  box-shadow: none;
 }
 
 .fr-header__body {
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: none;
-  height: auto !important;
-  min-height: auto !important;
-  max-height: none !important;
 }
 
 .fr-header__body-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  box-shadow: none;
-  height: auto !important;
-  min-height: auto !important;
-  max-height: none !important;
-}
-
-@media (min-width: 1024px) {
-  .fr-header__body-row {
-    flex-wrap: nowrap;
-  }
-}
-
-.fr-header__brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  flex-shrink: 0;
-  height: auto !important;
-  min-height: auto !important;
-  max-height: none !important;
-}
-
-.fr-header__brand a {
-  display: inline-block;
 }
 
 .fr-header__brand-top {
@@ -58,31 +26,19 @@
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  height: auto !important;
-  min-height: auto !important;
-  max-height: none !important;
-}
-
-.fr-header__logo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  height: auto !important;
-  min-height: auto !important;
-  max-height: none !important;
-}
-
-.fr-header__logo img {
-  max-width: none !important;
-  width: auto !important;
-  height: auto !important;
 }
 
 .fr-header__logo a {
-  height: auto !important;
-  min-height: auto !important;
-  max-height: none !important;
+  display: block;
+  max-width: 100%;
 }
+
+.fr-header__logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .fr-logo {
   font-size: 0.85rem;
