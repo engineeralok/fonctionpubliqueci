@@ -131,25 +131,6 @@ function DropdownMenu({ item, onClose }: DropdownMenuProps) {
           >
             <ul className="fr-menu__list">
               {item.items.map((subItem) => {
-                const isAllowed = isLinkAllowed(subItem.href, subItem.label);
-                if (isAllowed) {
-                  return (
-                    <li key={subItem.href} className="fr-menu__item">
-                      <a
-                        className="fr-nav__link"
-                        href={subItem.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => {
-                          setIsOpen(false);
-                          onClose?.();
-                        }}
-                      >
-                        {subItem.label}
-                      </a>
-                    </li>
-                  );
-                }
                 return (
                   <li key={subItem.href} className="fr-menu__item">
                     <span className="fr-nav__link">{subItem.label}</span>
@@ -188,12 +169,12 @@ export default function Header() {
             <div className="fr-header__brand fr-enlarge-link">
               <div className="fr-header__brand-top">
                 <div className="fr-header__logo">
-                  <Link href="/" className="block w-[300px] md:w-[400px] lg:w-[480px]">
+                  <Link href="/" className="block w-[360px] md:w-[480px] lg:w-[560px]">
                     <Image
                       src="/logo.png"
                       alt="Logo"
-                      width={480}
-                      height={78}
+                      width={560}
+                      height={91}
                       className="object-contain my-[5px] w-full h-auto"
                       priority
                     />
@@ -228,16 +209,6 @@ export default function Header() {
                 return (
                   <li key={item.label} className="fr-nav__item">
                     <DropdownMenu item={item} />
-                  </li>
-                );
-              }
-              const isAllowed = isLinkAllowed(item.href, item.label);
-              if (isAllowed) {
-                return (
-                  <li key={item.href} className="fr-nav__item">
-                    <a className="fr-nav__link" href={item.href} target="_blank" rel="noopener noreferrer">
-                      {item.label}
-                    </a>
                   </li>
                 );
               }
@@ -294,22 +265,6 @@ export default function Header() {
                         >
                           <ul className="fr-menu__list">
                             {item.items.map((subItem) => {
-                              const isAllowed = isLinkAllowed(subItem.href, subItem.label);
-                              if (isAllowed) {
-                                return (
-                                  <li key={subItem.href} className="fr-menu__item">
-                                    <a
-                                      className="fr-nav__link"
-                                      href={subItem.href}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      onClick={() => setIsMenuOpen(false)}
-                                    >
-                                      {subItem.label}
-                                    </a>
-                                  </li>
-                                );
-                              }
                               return (
                                 <li key={subItem.href} className="fr-menu__item">
                                   <span className="fr-nav__link">{subItem.label}</span>
@@ -318,22 +273,6 @@ export default function Header() {
                             })}
                           </ul>
                         </div>
-                      </li>
-                    );
-                  }
-                  const isAllowed = isLinkAllowed(item.href, item.label);
-                  if (isAllowed) {
-                    return (
-                      <li key={item.href} className="fr-nav__item">
-                        <a
-                          className="fr-nav__link"
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {item.label}
-                        </a>
                       </li>
                     );
                   }
