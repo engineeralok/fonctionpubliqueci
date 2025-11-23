@@ -175,7 +175,7 @@ export default function Header() {
                       alt="Logo"
                       width={600}
                       height={98}
-                      className="object-contain my-[5px] w-full h-auto"
+                      className="object-contain w-full h-auto"
                       priority
                     />
                   </Link>
