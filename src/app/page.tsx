@@ -110,12 +110,12 @@ export default function Home() {
             <div className="fr-col-12">
               <article className="node node--type-accueil node--promoted node--view-mode-full fr-mt-8w">
                 <div className="node__content">
-                  <h1>La fonction publique, cette administration publique à votre écoute</h1>
+                  <h1>La fonction publique, cette administration a votre écoute</h1>
                   <div className="node__content">
                     <div className="fr-mt-3w fr-mb-6w">
                       <Image
-                        src="/images/herosection.jpg"
-                        alt="La fonction publique, cette administration publique a votre écoute"
+                        src="/images/hero.jpeg"
+                        alt="La fonction publique, cette administration a votre écoute"
                         width={1200}
                         height={470}
                         priority

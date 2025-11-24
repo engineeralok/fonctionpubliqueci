@@ -20,6 +20,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Hero title - keep on one line */
+.node__content h1 {
+  white-space: nowrap;
+  font-size: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .node__content h1 {
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

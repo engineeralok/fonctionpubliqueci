@@ -10,9 +10,9 @@ export default function Header() {
 
   return (
     <header className="fr-header" role="banner">
-      {/* Logo Row - 90% width, logo 370px */}
+      {/* Logo Row - 95% width, logo 370px */}
       <div className="bg-white py-4">
-        <div className="mx-auto" style={{ width: '90%' }}>
+        <div className="mx-auto" style={{ width: '95%' }}>
           <Link href="/">
             <Image
               alt="Logo"
@@ -26,14 +26,14 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Navigation Bar Row - 80% width, orange background */}
+      {/* Navigation Bar Row - 95% width, orange background */}
       <nav 
         className="bg-[#f78a00]" 
         id="header-navigation-desktop" 
         role="navigation" 
         aria-label="Menu principal"
       >
-        <div className="mx-auto py-3" style={{ width: '80%' }}>
+        <div className="mx-auto py-3" style={{ width: '95%' }}>
           <div className="flex items-center justify-between text-white">
             {/* Left: Menu Title */}
             <div className="text-[11px] font-semibold uppercase">
