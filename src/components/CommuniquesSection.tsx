@@ -12,6 +12,7 @@ type Article = {
   width: number;
   height: number;
   credit?: string;
+  isUrgent?: boolean;
 };
 
 const segments = [
@@ -61,12 +62,25 @@ export default function CommuniquesSection({ articles }: { articles: Article[] }
                     <div className="fr-card__body">
                       <div className="fr-card__content">
                         <h3 className="fr-card__title">
-                          <a href={article.href} className="fr-card__link">
+                          <a
+                            href={article.href}
+                            className={`fr-card__link ${
+                              article.isUrgent ? "urgent-card__link flex items-center gap-3" : ""
+                            }`}
+                          >
                             {article.title}
+                            {article.isUrgent && (
+                              <span className="urgent-card__arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M5 12h14" />
+                                  <path d="m13 6 6 6-6 6" />
+                                </svg>
+                              </span>
+                            )}
                           </a>
                         </h3>
                         <div className="fr-card__start">
-                          <p className="fr-card__detail">{article.detail}</p>
+                          <p className={`fr-card__detail ${article.isUrgent ? "urgent-card__detail" : ""}`}>{article.detail}</p>
                         </div>
                       </div>
                     </div>

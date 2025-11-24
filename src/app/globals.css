@@ -64,6 +64,9 @@ body {
 .communicates-header .underline {
   border-bottom: 3px solid #FF914D;
   padding-bottom: 0.2rem;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .communicates-cta {
@@ -78,7 +81,6 @@ body {
 
 .communicates-box {
   background-color: #fff;
-  border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -90,4 +92,45 @@ body {
 
 .communicates-content {
   padding: 1rem;
+}
+
+.communicates-content .fr-card--grey {
+  background-color: #E6F1FF;
+  transition: background-color 0.3s ease;
+}
+
+.communicates-content .fr-card--grey:hover {
+  background-color: #FFE3CC;
+}
+
+.urgent-card__link {
+  color: #FF914D;
+  font-weight: 600;
+}
+
+.urgent-card__link:hover {
+  color: #E67A3D;
+}
+
+.urgent-card__detail {
+  color: #FF914D;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.urgent-card__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background-color: #FF914D;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.urgent-card__arrow svg {
+  width: 14px;
+  height: 14px;
 }
