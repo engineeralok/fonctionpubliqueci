@@ -244,7 +244,7 @@ body {
 /* Photothèque Section */
 .phototheque-section {
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .phototheque-image-col {
@@ -302,7 +302,7 @@ body {
 
 .phototheque-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-top: auto;
 }
 
@@ -317,15 +317,167 @@ body {
   text-decoration: none;
 }
 
-/* Reduce footer divider thickness */
+/* Remove footer divider */
 main {
-  border-bottom-width: 1px !important;
+  border-bottom: none !important;
 }
 
 .fr-footer {
-  border-top-width: 1px !important;
+  border-top: 2px solid #FF914D !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 .fr-footer__top {
-  border-top-width: 1px !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.custom-footer {
+  border-top: none !important;
+}
+
+.custom-footer > .fr-container {
+  border-top: none !important;
+}
+
+/* Custom Footer Layout */
+.custom-footer {
+  padding: 3rem 0 2rem;
+  background-color: #f5f5f5;
+  border-top: 2px solid #FF914D !important;
+  border-bottom: none !important;
+}
+
+.custom-footer > .fr-container {
+  border: none !important;
+}
+
+.footer-top-section {
+  border: none !important;
+}
+
+.footer-top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  gap: 3rem;
+}
+
+.footer-brand-section {
+  flex: 1;
+  max-width: 400px;
+}
+
+.footer-ministry-info {
+  margin-top: 1.5rem;
+}
+
+.footer-ministry-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0.25rem 0;
+  color: #333;
+}
+
+.footer-ministry-motto {
+  font-size: 0.875rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #666;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 4rem;
+  flex: 1;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.footer-column-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column-list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column-list a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.footer-column-list a:hover {
+  color: #FF914D;
+  text-decoration: underline;
+}
+
+.footer-links-section {
+  padding: 1.5rem 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.footer-institutional-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-institutional-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.footer-institutional-links a:hover {
+  color: #FF914D;
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-copyright p {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-top-section {
+    flex-direction: column;
+  }
+  
+  .footer-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer-institutional-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

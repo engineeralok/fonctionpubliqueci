@@ -57,56 +57,22 @@ const actionCards = [
 
 const footerColumns = [
   {
-    title: "Le ministre",
+    title: "Le Ministre",
     links: [
-      { label: "Actualité", href: "https://www.transformation.gouv.fr/ministre/actualite" },
-      { label: "Agenda", href: "https://www.transformation.gouv.fr/ministre/agenda" },
-      { label: "Biographie", href: "https://www.transformation.gouv.fr/ministre/biographie" },
-      { label: "Cabinet", href: "https://www.transformation.gouv.fr/ministre/biographie" },
+      { label: "Ressources", href: "#" },
+      { label: "Rubrique ressources", href: "#" },
     ],
   },
   {
-    title: "Le ministère",
-    links: [
-      { label: "Missions", href: "https://www.transformation.gouv.fr/" },
-      { label: "Directions", href: "https://www.transformation.gouv.fr/" },
-    ],
-  },
-  {
-    title: "Espace presse",
-    links: [{ label: "Espace Presse", href: "https://www.transformation.gouv.fr/espace-presse" }],
-  },
-  {
-    title: "Notre action",
-    links: [
-      { label: "France Relance : découvrez les projets lauréats", href: "https://www.transformation.gouv.fr/decouvrez-les-projets-laureats" },
-      { label: "France services", href: "https://www.transformation.gouv.fr/les-france-services" },
-      {
-        label: "Gouvernement Ouvert",
-        href: "https://gouvernement-ouvert.transformation.gouv.fr",
-        external: true,
-      },
-      {
-        label: "Réforme de l’encadrement supérieur de l’État",
-        href: "https://www.transformation.gouv.fr/reforme-de-l-encadrement-superieur-de-l-etat",
-      },
-      { label: "Talents du service public", href: "https://www.transformation.gouv.fr/cartographie-des-prepas-talents" },
-    ],
-  },
-  {
-    title: "Ressources",
-    links: [{ label: "Rubrique ressources", href: "https://www.transformation.gouv.fr/rubrique-ressources" }],
+    title: "Nos services",
+    links: [],
   },
 ];
 
 const institutionalLinks = [
-  "https://www.fonction-publique.gouv.fr/",
-  "https://www.numerique.gouv.fr/",
-  "https://www.modernisation.gouv.fr/",
-  "https://info.gouv.fr",
-  "https://legifrance.gouv.fr",
-  "https://www.service-public.gouv.fr",
-  "https://data.gouv.fr",
+  "presidence.gouv.ci",
+  "tresor.gouv.ci",
+  "impots.gouv.ci",
 ];
 
 const footerBottomLinks = [
@@ -273,85 +239,58 @@ export default function Home() {
         </div> */}
       </main>
 
-      <footer className="fr-footer" role="contentinfo" id="footer">
-        <div className="fr-footer__top">
-          <div className="fr-container">
-            <nav aria-labelledby="block-mtfp-2024-ds-mega-footer-menu" id="block-mtfp-2024-ds-mega-footer" className="block block-menu navigation menu--footer">
-              <h2 className="visually-hidden" id="block-mtfp-2024-ds-mega-footer-menu">
-                Mega menu Pied de page
-              </h2>
-              <div className="fr-grid-row fr-grid-row--start fr-grid-row--gutters">
-                {footerColumns.map((column) => (
-                  <div className="fr-col-12 fr-col-sm-3 fr-col-md-2" key={column.title}>
-                    <h3 className="fr-footer__top-cat">{column.title}</h3>
-                    <ul className="fr-footer__top-list">
-                      {column.links.map((link) => (
-                        <li key={link.label}>
-                          <a
-                            className="fr-footer__top-link"
-                            href={link.href}
-                            target={link.external ? "_blank" : undefined}
-                            rel={link.external ? "noopener noreferrer" : undefined}
-                          >
-                            {link.label}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </nav>
-          </div>
-        </div>
+      <footer className="fr-footer custom-footer" role="contentinfo" id="footer">
         <div className="fr-container">
-          <div className="fr-footer__body">
-            <div className="fr-footer__brand fr-enlarge-link">
+          <div className="footer-top-section">
+            <div className="footer-brand-section">
               <Link href="/" title="Ministère de la Fonction publique et de la Réforme de l'État - Retour à l'accueil du site">
                 <Image
                   src="/images/mobilelogo1.png"
                   alt="Ministère de la Fonction publique et de la Réforme de l'État"
-                  width={317}
-                  height={115}
+                  width={222}
+                  height={81}
                   className="footer-logo"
                 />
               </Link>
+              <div className="footer-ministry-info">
+                <p className="footer-ministry-title">MINISTÈRE D'ÉTAT</p>
+                <p className="footer-ministry-title">MINISTÈRE DE LA FONCTION PUBLIQUE</p>
+                <p className="footer-ministry-title">ET DE LA MODERNISATION DE L'ADMINISTRATION</p>
+                <p className="footer-ministry-motto">Union<br/>Discipline<br/>Travail</p>
+              </div>
             </div>
-            <div className="fr-footer__content">
-              <ul className="fr-footer__content-list">
-                {institutionalLinks.map((href) => (
-                  <li className="fr-footer__content-item" key={href}>
-                    <a className="fr-footer__content-link" href={href} target="_blank" rel="noopener noreferrer external">
-                      {href.replace("https://", "").replace("www.", "")}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
+            <nav className="footer-columns">
+              {footerColumns.map((column) => (
+                <div className="footer-column" key={column.title}>
+                  <h3 className="footer-column-title">{column.title}</h3>
+                  {column.links.length > 0 && (
+                    <ul className="footer-column-list">
+                      {column.links.map((link) => (
+                        <li key={link.label}>
+                          <a href={link.href}>{link.label}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </nav>
           </div>
-          <div className="fr-footer__bottom">
-            <ul className="fr-footer__bottom-list">
-              {footerBottomLinks.map((link) => (
-                <li className="fr-footer__bottom-item" key={link.href}>
-                  <a className="fr-footer__bottom-link" href={link.href}>
-                    {link.label}
+
+          <div className="footer-links-section">
+            <ul className="footer-institutional-links">
+              {institutionalLinks.map((link) => (
+                <li key={link}>
+                  <a href={`https://${link}`} target="_blank" rel="noopener noreferrer">
+                    {link}
                   </a>
                 </li>
               ))}
-              <li className="fr-footer__bottom-item">
-                <button id="tarteaucitronManager" className="fr-footer__bottom-link" type="button">
-                  Gestion des cookies
-                </button>
-              </li>
             </ul>
-            <div className="fr-footer__bottom-copy">
-              <p>
-                Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous{" "}
-                <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank" rel="noopener noreferrer external">
-                  licence etalab-2.0
-                </a>
-              </p>
-            </div>
+          </div>
+          <div className="footer-copyright">
+            <p>Copyright - Confidentiel Etat Ivoirien</p>
           </div>
         </div>
       </footer>
