@@ -4,6 +4,7 @@ import {
   Roboto_Mono,
   Source_Sans_3,
   Spectral,
+  Instrument_Serif,
 } from "next/font/google";
 import "./globals.css";
 
@@ -29,6 +30,12 @@ const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "600"],
   variable: "--font-open-sans",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-instrument-serif",
 });
 
 const cssLinks = [
@@ -73,7 +80,7 @@ export default function RootLayout({
         ))}
       </head>
       <body
-        className={`path-frontpage page-node-type-accueil ${robotoMono.variable} ${spectral.variable} ${sourceSans.variable} ${openSans.variable}`}
+        className={`path-frontpage page-node-type-accueil ${robotoMono.variable} ${spectral.variable} ${sourceSans.variable} ${openSans.variable} ${instrumentSerif.variable}`}
       >
         <Header />
         {children}

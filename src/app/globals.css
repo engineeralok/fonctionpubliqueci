@@ -161,3 +161,123 @@ body {
   display: none !important;
   content: none !important;
 }
+
+/* Actualités Section */
+.actualites-section {
+  margin-top: 2rem;
+}
+
+.actualites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.actualites-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.actualites-header .underline {
+  border-bottom: 3px solid #FF914D;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.actualites-cta {
+  border: 1px solid #FF914D;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FF914D;
+  text-decoration: none;
+}
+
+.actualites-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.actualites-article {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.actualites-article:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.actualites-article__text {
+  font-family: var(--font-instrument-serif), Georgia, "Times New Roman", Times, serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0 0 0.75rem 0;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+.actualites-article__date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Photothèque Section */
+.phototheque-section {
+  margin-top: 2rem;
+}
+
+.phototheque-image-placeholder {
+  width: 100%;
+  min-height: 300px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phototheque-content {
+  padding: 1.5rem 0;
+}
+
+.phototheque-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.phototheque-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.phototheque-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.phototheque-link {
+  text-decoration: underline;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}

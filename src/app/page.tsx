@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
 import CommuniquesSection from "@/components/CommuniquesSection";
+import ActualitesSection from "@/components/ActualitesSection";
+import PhotothequeSection from "@/components/PhotothequeSection";
 
 const featuredArticles = [
   {
@@ -168,6 +170,10 @@ export default function Home() {
                     </div>
 
                     <CommuniquesSection articles={featuredArticles} />
+
+                    <ActualitesSection />
+
+                    <PhotothequeSection />
 
                     <section className="paragraph paragraph--type--ds-cartes paragraph--view-mode--default fr-grid-row fr-grid-row--gutters">
                       <div className="fr-col-12">
