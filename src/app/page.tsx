@@ -307,13 +307,14 @@ export default function Home() {
         <div className="fr-container">
           <div className="fr-footer__body">
             <div className="fr-footer__brand fr-enlarge-link">
-              <Link href="/" title="Ministère de la Fonction publique et de la Réforme de l’État - Retour à l’accueil du site">
-                <p className="fr-logo">
-                  Ministère
-                  <br />
-                  de la Fonction publique <br />
-                  et de la Réforme de l’État
-                </p>
+              <Link href="/" title="Ministère de la Fonction publique et de la Réforme de l'État - Retour à l'accueil du site">
+                <Image
+                  src="/images/mobilelogo1.png"
+                  alt="Ministère de la Fonction publique et de la Réforme de l'État"
+                  width={317}
+                  height={115}
+                  className="footer-logo"
+                />
               </Link>
             </div>
             <div className="fr-footer__content">
