@@ -1,16 +1,295 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*,
-*::before,
-*::after {
+:root {
+  --background: #ffffff;
+  --foreground: #293340;
+  --navy-blue: #030a1b;
+  --deep-navy-blue: #0d132d;
+  --navy-accent: #141f4d;
+  --charcoal: #293340;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
   box-sizing: border-box;
 }
 
 body {
+  background: #ffffff;
+  color: var(--foreground);
+  font-family: var(--font-source-sans-pro), "Source Sans 3", system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1rem, 0.18vw + 0.95rem, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Instrument Serif", var(--font-spectral), "Times New Roman",
+      serif;
+    text-wrap: balance;
+    color: var(--navy-blue);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .link-hover-gray {
+    @apply transition-colors hover:text-gray-300;
+  }
+
+  .link-hover-white {
+    @apply transition-colors hover:text-white;
+  }
+
+  .form-input {
+    @apply px-4 py-3 border-2 border-charcoal text-charcoal bg-white transition-colors focus:outline-none focus:border-navy-500;
+  }
+
+  .form-button {
+    @apply px-6 py-3 border-2 border-charcoal text-charcoal font-medium transition-colors bg-white hover:bg-gray-100;
+  }
+
+  .carousel-container {
+    @apply relative w-full h-[520px] overflow-hidden;
+  }
+
+  @screen md {
+    .carousel-container {
+      height: 640px;
+    }
+  }
+
+  @screen lg {
+    .carousel-container {
+      height: 760px;
+    }
+  }
+
+  .carousel-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(3, 10, 27, 0.35) 0%,
+      rgba(3, 10, 27, 0.85) 100%
+    );
+  }
+
+  .carousel-nav-bg {
+    @apply bg-slate-700/80 hover:bg-slate-700;
+  }
+
+  .carousel-dot-active {
+    @apply w-8 h-1 bg-white rounded-full;
+  }
+
+  .carousel-dot-inactive {
+    @apply w-4 h-1 bg-white/40 rounded-full;
+  }
+
+  .announcement-ticker {
+    background: linear-gradient(90deg, #030a1b, #141f4d);
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase text-slate-500;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-serif uppercase text-charcoal;
+  }
+
+  .content-container {
+    @apply mx-auto w-full max-w-content-xl px-4 sm:px-8;
+  }
+
+  /* Legacy header skin (kept per user instruction) */
+.fr-header {
+    @apply bg-white text-charcoal;
+}
+
+.fr-header__body {
+    @apply border-b border-gray-200;
+}
+
+.fr-header__body-row {
+    @apply flex flex-wrap items-start justify-between gap-6 lg:flex-nowrap;
+}
+
+.fr-header__brand {
+    @apply flex flex-col gap-2;
+}
+
+.fr-header__brand-top {
+    @apply flex items-center justify-between gap-4 w-full;
+}
+
+.fr-header__logo {
+    @apply flex flex-col gap-1;
+}
+
+.fr-logo {
+    font-size: 0.85rem;
+  font-weight: 700;
+    line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.fr-logo-motto {
+  font-size: 0.75rem;
+  font-style: italic;
   margin: 0;
-  background-color: #fff;
-  color: #000;
-  min-height: 100vh;
-  overflow-x: hidden;
-  width: 100%;
+  }
+
+  .fr-header__service {
+    @apply mt-2;
+  }
+
+  .fr-header__service-title {
+    font-size: clamp(1.5rem, 1vw + 1.25rem, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    @apply text-charcoal;
+  }
+
+.fr-header__navbar {
+    @apply flex items-center;
+}
+
+.fr-btn {
+    @apply inline-flex items-center justify-center rounded border border-transparent bg-white px-4 py-2 text-sm font-medium text-charcoal shadow-sm transition-colors hover:bg-gray-100;
+}
+
+.fr-btn--menu {
+    @apply pl-10;
+  position: relative;
+  border-color: #9ca3af !important;
+  width: 2.0rem;
+  height: 2.0rem;
+  padding: 0 !important;
+  margin-top: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fr-btn--menu::before {
+    content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+  transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.fr-btn--menu[data-fr-opened="true"]::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'/%3E%3C/svg%3E");
+}
+
+.fr-nav {
+    background-color: #f78a00;
+  border-bottom: 1px solid #d16a1f;
+}
+
+.fr-nav__menu-title {
+    @apply text-sm font-semibold uppercase text-white;
+}
+
+.fr-nav__list {
+    @apply flex list-none items-center gap-6 p-0;
+}
+
+.fr-nav__item {
+    @apply relative;
+}
+
+.fr-nav__btn,
+.fr-nav__link {
+    @apply flex items-center gap-2 rounded px-2 py-3 text-sm font-medium text-white transition-colors hover:bg-[#d16a1f];
+    border: none;
+    background: transparent;
+  }
+
+.fr-menu {
+    @apply absolute left-0 top-full z-50 mt-1 w-72 rounded border border-[#d16a1f] bg-[#E67E22] shadow-xl;
+}
+
+.fr-menu__list {
+    @apply divide-y divide-[#d16a1f];
+  }
+
+  .fr-menu__item a {
+    @apply block px-4 py-3 text-sm text-white hover:bg-[#d16a1f];
+  }
+
+  .fr-modal {
+    @apply fixed inset-0 z-50;
+  }
+
+  .fr-btn--close {
+    @apply relative;
+  }
+
+  .fr-btn--close::before {
+    content: "✕";
+    @apply absolute;
+  }
+
+  /* Mobile modal menu styles */
+  .fr-header__menu .fr-nav {
+    @apply bg-transparent;
+  }
+
+  .fr-header__menu .fr-nav__list {
+    @apply flex-col items-start gap-0;
+  }
+
+  .fr-header__menu .fr-nav__item {
+    @apply w-full;
+  }
+
+  .fr-header__menu .fr-nav__btn,
+  .fr-header__menu .fr-nav__link {
+    @apply w-full justify-start;
+  }
+
+  .fr-header__menu .fr-menu {
+    @apply relative left-0 top-0 mt-0 w-full border-0 shadow-none;
+  }
+
+  .fr-header__menu .fr-menu__list {
+    @apply divide-y divide-white/20;
+  }
+
+  .fr-header__menu .fr-menu__item a {
+    @apply text-white;
+  }
+
+  /* Remove any default button/link styling that might cause white dots */
+  .fr-header__menu button,
+  .fr-header__menu a {
+    @apply rounded-none border-0 outline-none;
+    box-shadow: none !important;
+  }
+
+  .fr-header__menu button:focus,
+  .fr-header__menu a:focus {
+    @apply outline-none ring-0;
+  }
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "@/styles/header-styles.css";
 
 const cssLinks = [
   { href: "/transformation/css/site-0.css", media: "all" },
