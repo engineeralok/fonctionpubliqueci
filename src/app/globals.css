@@ -31,3 +31,10 @@ body {
 .nav-link:hover {
   background-color: #E67A3D !important;
 }
+
+/* Ensure desktop header is visible on large screens */
+@media (min-width: 1024px) {
+  .desktop-header {
+    display: block !important;
+  }
+}
