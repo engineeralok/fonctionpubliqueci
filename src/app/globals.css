@@ -43,3 +43,51 @@ body {
   background-color: #FF914D !important;
   color: #fff !important;
 }
+
+.communicates-section {
+  margin-top: 2rem;
+}
+
+.communicates-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.communicates-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.communicates-header .underline {
+  border-bottom: 3px solid #FF914D;
+  padding-bottom: 0.2rem;
+}
+
+.communicates-cta {
+  border: 1px solid #FF914D;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FF914D;
+}
+
+.communicates-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.communicates-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.communicates-content {
+  padding: 1rem;
+}
