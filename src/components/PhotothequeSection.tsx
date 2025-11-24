@@ -8,17 +8,25 @@ export default function PhotothequeSection() {
       <div className="fr-grid-row fr-grid-row--gutters">
         <div className="fr-col-12 fr-col-md-6">
           <div className="phototheque-image-placeholder">
-            {/* Placeholder for image - can be replaced with actual image later */}
+            <Image
+              src="/images/photo.jpeg"
+              alt="Les images des actions du ministère enregistrées"
+              width={800}
+              height={500}
+              className="phototheque-image"
+            />
           </div>
         </div>
         <div className="fr-col-12 fr-col-md-6">
           <div className="phototheque-content">
-            <h2 className="phototheque-title">Photothèque</h2>
+            <h2 className="phototheque-title">
+              <span className="underline">Photothèque</span>
+            </h2>
             <p className="phototheque-description">
               Les images des actions du ministère enregistrées.
             </p>
             <div className="phototheque-footer">
-              <a href="#" className="phototheque-link">
+              <a href="#" className="phototheque-cta">
                 VOIR PLUS/
               </a>
             </div>

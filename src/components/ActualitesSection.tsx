@@ -15,8 +15,23 @@ const actualitesArticles: Article[] = [
     href: "#",
   },
   {
-    title: "Les communiqués d'ouverture des concours administratifs, session 2025 sont disponibles.",
-    date: "Article - 13 octobre 2025",
+    title: "L'organisation mondiale de la propriété intellectuelle (OMPI) lance un avis de vacance pour les poste suivant",
+    date: "Article - 16 octobre 2025",
+    href: "#",
+  },
+  {
+    title: "L'organisation mondiale de la propriété intellectuelle (OMPI) lance un avis de vacance pour les poste suivant",
+    date: "Article - 16 octobre 2025",
+    href: "#",
+  },
+  {
+    title: "L'organisation mondiale de la propriété intellectuelle (OMPI) lance un avis de vacance pour les poste suivant",
+    date: "Article - 16 octobre 2025",
+    href: "#",
+  },
+  {
+    title: "L'organisation mondiale de la propriété intellectuelle (OMPI) lance un avis de vacance pour les poste suivant",
+    date: "Article - 16 octobre 2025",
     href: "#",
   },
 ];
@@ -35,10 +50,10 @@ export default function ActualitesSection() {
 
       <div className="actualites-content">
         {actualitesArticles.map((article, index) => (
-          <div key={index} className="actualites-article">
+          <a key={index} href={article.href} className="actualites-article">
             <h3 className="actualites-article__text">{article.title}</h3>
             <p className="actualites-article__date">{article.date}</p>
-          </div>
+          </a>
         ))}
       </div>
     </section>

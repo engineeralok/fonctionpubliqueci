@@ -175,7 +175,7 @@ export default function Home() {
 
                     <PhotothequeSection />
 
-                    <section className="paragraph paragraph--type--ds-cartes paragraph--view-mode--default fr-grid-row fr-grid-row--gutters">
+                    {/* <section className="paragraph paragraph--type--ds-cartes paragraph--view-mode--default fr-grid-row fr-grid-row--gutters">
                       <div className="fr-col-12">
                         <div className="fr-grid-row fr-grid-row--middle ds-rangee-de--entete title-only">
                           <h2>Notre action</h2>
@@ -203,9 +203,9 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
-                    </section>
+                    </section> */}
 
-                    <section className="paragraph paragraph--type--ds-cartes paragraph--view-mode--default fr-grid-row fr-grid-row--gutters">
+                    {/* <section className="paragraph paragraph--type--ds-cartes paragraph--view-mode--default fr-grid-row fr-grid-row--gutters">
                       <div className="fr-col-12">
                         <div className="fr-card fr-card--vertical fr-card--default fr-enlarge-link ds-card--external-link-icon">
                           <div className="fr-card__body">
@@ -235,7 +235,7 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                    </section>
+                    </section> */}
                   </div>
                 </div>
               </article>
@@ -243,16 +243,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="fr-grid-row ds-row--space-between fr-container fr-mt-4w">
+        {/* <div className="fr-grid-row ds-row--space-between fr-container fr-mt-4w">
           <ShareButtons />
           <div className="fr-mt-2w">
             <a className="ds-back-to-top fr-link fr-icon-arrow-up-fill fr-link--icon-left" href="#haut-de-page">
               Haut de page
             </a>
           </div>
-        </div>
+        </div> */}
 
-        <div className="fr-follow">
+        {/* <div className="fr-follow">
           <div className="fr-container">
             <div className="fr-grid-row">
               <div className="fr-col-12">
@@ -270,7 +270,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
 
       <footer className="fr-footer" role="contentinfo" id="footer">
