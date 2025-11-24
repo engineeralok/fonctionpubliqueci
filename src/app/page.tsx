@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
 import ShareButtons from "@/components/ShareButtons";
 
 const featuredArticles = [
@@ -138,11 +137,6 @@ export default function Home() {
               </a>
             </li>
             <li>
-              <a href="#header-navigation" className="fr-link">
-                Aller au menu de navigation
-              </a>
-            </li>
-            <li>
               <a href="#footer" className="fr-link">
                 Aller au pied de page
               </a>
@@ -150,8 +144,6 @@ export default function Home() {
           </ul>
         </nav>
       </div>
-
-      <Header />
 
       <main role="main">
         <a id="contenu" tabIndex={-1}></a>

@@ -1,5 +1,35 @@
 import type { Metadata } from "next";
+import {
+  Open_Sans,
+  Roboto_Mono,
+  Source_Sans_3,
+  Spectral,
+} from "next/font/google";
 import "./globals.css";
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-roboto-mono",
+});
+
+const spectral = Spectral({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-spectral",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-source-sans-pro",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-open-sans",
+});
 
 const cssLinks = [
   { href: "/transformation/css/site-0.css", media: "all" },
@@ -40,7 +70,9 @@ export default function RootLayout({
           <link key={link.href} rel="stylesheet" {...link} />
         ))}
       </head>
-      <body className="path-frontpage page-node-type-accueil">
+      <body
+        className={`path-frontpage page-node-type-accueil ${robotoMono.variable} ${spectral.variable} ${sourceSans.variable} ${openSans.variable}`}
+      >
         {children}
       </body>
     </html>
