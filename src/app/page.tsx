@@ -152,18 +152,12 @@ export default function Home() {
             <div className="fr-col-12">
               <article className="node node--type-accueil node--promoted node--view-mode-full fr-mt-8w">
                 <div className="node__content">
-                  <h1>Le service public, ces métiers qui nous font tous avancer</h1>
+                  <h1>La fonction publique, cette administration publique a votre écoute...</h1>
                   <div className="node__content">
-                    <a
-                      className="fr-link fr-icon-arrow-right-line fr-link--icon-right fr-link--align-on-content"
-                      href="https://www.transformation.gouv.fr/ministre/actualite/le-service-public-ces-metiers-qui-nous-font-tous-avancer"
-                    >
-                      Voir l’article
-                    </a>
                     <div className="fr-mt-3w fr-mb-6w">
                       <Image
-                        src="/transformation/images/hero.png"
-                        alt="Ces métiers qui nous font avancer. # Choisir le service public"
+                        src="/images/herosection.jpg"
+                        alt="La fonction publique, cette administration publique a votre écoute"
                         width={1200}
                         height={470}
                         priority
