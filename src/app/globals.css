@@ -317,35 +317,72 @@ body {
   text-decoration: none;
 }
 
-/* Remove footer divider */
-main {
+/* Remove ALL borders before footer - aggressive override */
+main,
+main *,
+main::before,
+main::after {
   border-bottom: none !important;
+  border-top: none !important;
 }
 
-.fr-footer {
+/* Remove any separators or dividers */
+.fr-follow,
+.fr-follow::before,
+.fr-follow::after {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Footer styling - ONLY orange top border */
+.fr-footer,
+footer,
+#footer {
+  border: none !important;
   border-top: 2px solid #FF914D !important;
-  border-bottom: none !important;
-  border-left: none !important;
-  border-right: none !important;
+  box-shadow: none !important;
+}
+
+.fr-footer::before,
+.fr-footer::after,
+footer::before,
+footer::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
 }
 
 .fr-footer__top {
-  border-top: none !important;
-  border-bottom: none !important;
+  border: none !important;
+}
+
+.fr-footer__top::before,
+.fr-footer__top::after {
+  display: none !important;
+  border: none !important;
 }
 
 .custom-footer {
-  border-top: none !important;
+  border: none !important;
+  border-top: 2px solid #FF914D !important;
 }
 
 .custom-footer > .fr-container {
+  border: none !important;
+}
+
+/* Remove any container borders near footer */
+.fr-container {
   border-top: none !important;
+  border-bottom: none !important;
 }
 
 /* Custom Footer Layout */
 .custom-footer {
   padding: 3rem 0 2rem;
-  background-color: #f5f5f5;
+  background-color: #E6F1FF;
   border-top: 2px solid #FF914D !important;
   border-bottom: none !important;
 }
@@ -368,6 +405,17 @@ main {
 .footer-brand-section {
   flex: 1;
   max-width: 400px;
+}
+
+.footer-services {
+  margin-top: 1.5rem;
+}
+
+.footer-services-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
 }
 
 .footer-ministry-info {
@@ -426,6 +474,56 @@ main {
 .footer-column-list a:hover {
   color: #FF914D;
   text-decoration: underline;
+}
+
+.footer-social {
+  flex: 1;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-social-icon--facebook {
+  background-color: #1877F2;
+}
+
+.footer-social-icon--facebook:hover {
+  background-color: #166FE5;
+}
+
+.footer-social-icon--twitter {
+  background-color: #1DA1F2;
+}
+
+.footer-social-icon--twitter:hover {
+  background-color: #1A91DA;
+}
+
+.footer-social-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .footer-links-section {
