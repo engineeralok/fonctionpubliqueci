@@ -104,12 +104,23 @@ body {
 }
 
 .urgent-card__link {
-  color: #FF914D;
+  color: #FF914D !important;
   font-weight: 600;
 }
 
 .urgent-card__link:hover {
-  color: #E67A3D;
+  color: #E67A3D !important;
+}
+
+/* Ensure orange color for urgent card links in communicates section */
+.communicates-content .fr-card--grey .urgent-card__link,
+.communicates-content .fr-card--grey .fr-card__link.urgent-card__link {
+  color: #FF914D !important;
+}
+
+.communicates-content .fr-card--grey .urgent-card__link:hover,
+.communicates-content .fr-card--grey .fr-card__link.urgent-card__link:hover {
+  color: #E67A3D !important;
 }
 
 .urgent-card__detail {
@@ -118,7 +129,14 @@ body {
   text-transform: uppercase;
 }
 
+.urgent-card-container {
+  position: relative;
+}
+
 .urgent-card__arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -128,6 +146,7 @@ body {
   background-color: #FF914D;
   color: #fff;
   flex-shrink: 0;
+  z-index: 10;
 }
 
 .urgent-card__arrow svg {
