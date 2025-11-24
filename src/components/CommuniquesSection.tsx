@@ -28,7 +28,7 @@ export default function CommuniquesSection({ articles }: { articles: Article[] }
     <section className="paragraph paragraph--type--ds-vue-bloc paragraph--view-mode--default view--actualites view-display--a_la_une fr-grid-row fr-grid-row--center fr-grid-row--gutters">
       <div className="fr-col-12">
         <div className="fr-grid-row fr-grid-row--middle ds-rangee-de--entete link-and-title">
-          <h2>Les communiqués surlignés...</h2>
+          <h2>Les communiqués surlignés</h2>
           <a
             className="border border-white/70 text-white px-4 py-2 rounded-md uppercase text-xs font-semibold"
             href="https://www.transformation.gouv.fr/ministre/actualite"
