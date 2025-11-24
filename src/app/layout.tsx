@@ -51,6 +51,8 @@ export const metadata: Metadata = {
   },
 };
 
+import Header from "@/components/Header";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,6 +75,7 @@ export default function RootLayout({
       <body
         className={`path-frontpage page-node-type-accueil ${robotoMono.variable} ${spectral.variable} ${sourceSans.variable} ${openSans.variable}`}
       >
+        <Header />
         {children}
       </body>
     </html>
