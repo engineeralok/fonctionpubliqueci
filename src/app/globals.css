@@ -38,3 +38,8 @@ body {
     display: block !important;
   }
 }
+
+.segment-button:hover {
+  background-color: #f78a00 !important;
+  color: #fff !important;
+}

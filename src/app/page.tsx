@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
+import CommuniquesSection from "@/components/CommuniquesSection";
 
 const featuredArticles = [
   {
@@ -164,41 +165,7 @@ export default function Home() {
                       />
                     </div>
 
-                    <section className="paragraph paragraph--type--ds-vue-bloc paragraph--view-mode--default view--actualites view-display--a_la_une fr-grid-row fr-grid-row--center fr-grid-row--gutters">
-                      <div className="fr-col-12">
-                        <div className="fr-grid-row fr-grid-row--middle ds-rangee-de--entete link-and-title">
-                          <h2>À la une</h2>
-                          <a className="fr-link fr-icon-arrow-right-line fr-link--icon-left fr-link--align-on-content" href="https://www.transformation.gouv.fr/ministre/actualite">
-                            Voir tout
-                          </a>
-                        </div>
-                        <div className="fr-grid-row fr-grid-row--gutters ds-rangee-de--contenu">
-                          {featuredArticles.map((article) => (
-                            <div className="fr-col-12 fr-col-md-4 views-row" key={article.href}>
-                              <article className="node node--type-actualite node--promoted node--view-mode-ds-carte-verticale-complet fr-card fr-enlarge-link fr-mb-8v fr-card--grey">
-                                <div className="fr-card__body">
-                                  <div className="fr-card__content">
-                                    <h3 className="fr-card__title">
-                                      <a href={article.href} className="fr-card__link">
-                                        {article.title}
-                                      </a>
-                                    </h3>
-                                    <div className="fr-card__start">
-                                      <p className="fr-card__detail">{article.detail}</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="fr-card__header">
-                                  <div className="fr-card__img">
-                                    <Image src={article.image} alt={article.credit ?? ""} width={article.width} height={article.height} />
-                                  </div>
-                                </div>
-                              </article>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </section>
+                    <CommuniquesSection articles={featuredArticles} />
 
                     <section className="paragraph paragraph--type--ds-cartes paragraph--view-mode--default fr-grid-row fr-grid-row--gutters">
                       <div className="fr-col-12">
