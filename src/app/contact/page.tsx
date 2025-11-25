@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import FooterLogo from "@/components/FooterLogo";
 
 export const metadata: Metadata = {
@@ -73,9 +72,7 @@ export default function ContactPage() {
         <div className="fr-container">
           <div className="footer-top-section">
             <div className="footer-brand-section">
-              <Link href="/" title="Ministère de la Fonction publique et de la Réforme de l'État - Retour à l'accueil du site">
-                <FooterLogo />
-              </Link>
+              <FooterLogo />
               <div className="footer-services">
                 <h3 className="footer-services-title">Le Ministère</h3>
                 <ul className="footer-column-list">
