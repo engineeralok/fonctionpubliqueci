@@ -95,6 +95,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .communicates-header h2 {
@@ -197,6 +198,21 @@ body {
 }
 
 @media (max-width: 768px) {
+  .communicates-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .communicates-header .underline {
+    font-size: clamp(1.35rem, 6vw, 1.65rem);
+  }
+
+  .communicates-cta {
+    width: 100%;
+    text-align: center;
+  }
+
   .communicates-tabs {
     display: none;
   }
