@@ -62,7 +62,16 @@ body {
 /* Navigation button hover states */
 [id^="desktop-button-"]:hover,
 .nav-link:hover {
-  background-color: #E67A3D !important;
+  background-color: #B84400 !important;
+}
+
+.header-action-btn {
+  background-color: transparent !important;
+  color: #fff;
+}
+
+.header-action-btn:hover {
+  background-color: #B84400 !important;
 }
 
 /* Ensure desktop header is visible on large screens */

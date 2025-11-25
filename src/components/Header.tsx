@@ -80,7 +80,7 @@ function DropdownButton({
         ref={refs.setReference}
         {...getReferenceProps()}
         id={`desktop-button-${menu.id}`}
-        className="flex items-center gap-1 sm:gap-2 text-white hover:text-white px-1 sm:px-2 md:px-3 rounded transition-all h-full"
+        className="flex items-center gap-0.5 sm:gap-1 text-white hover:text-white px-1 sm:px-2 md:px-3 rounded transition-all h-full"
         aria-expanded={isOpen}
         aria-haspopup="true"
         aria-controls={`desktop-menu-${menu.id}`}
@@ -113,7 +113,7 @@ function DropdownButton({
                   return (
                     <div
                       key={index}
-                      className="px-4 py-2 flex items-center justify-between hover:bg-[#E67A3D] text-white whitespace-nowrap cursor-pointer"
+                      className="px-4 py-2 flex items-center justify-between header-action-btn text-white whitespace-nowrap cursor-pointer"
                     >
                       <span>{item.label}</span>
                       <ArrowIcon />
@@ -124,7 +124,7 @@ function DropdownButton({
                   <Link
                     key={index}
                     href={item.href || "#"}
-                    className="px-4 py-2 hover:bg-[#E67A3D] text-white whitespace-nowrap"
+                    className="px-4 py-2 header-action-btn text-white whitespace-nowrap"
                     onClick={() => onOpenChange(false)}
                   >
                     {item.label}
@@ -258,7 +258,7 @@ export default function Header() {
             <div className="flex items-center gap-4">
               <button
                 aria-label="Rechercher"
-                className="p-2 rounded-full hover:bg-white/10"
+                className="p-2 rounded-full header-action-btn"
               >
                 <svg
                   fill="none"
@@ -276,13 +276,17 @@ export default function Header() {
               </button>
               <span className="h-6 w-px bg-white/40" aria-hidden="true" />
               <div className="flex items-center gap-2 text-[11px] uppercase font-semibold">
-                <span>FR</span>
-                <span>EN</span>
+                <button className="px-2 py-1 rounded header-action-btn">
+                  FR
+                </button>
+                <button className="px-2 py-1 rounded header-action-btn">
+                  EN
+                </button>
               </div>
             </div>
             <button
               aria-label="Fermer le menu"
-              className="p-2 rounded-full hover:bg-white/10"
+              className="p-2 rounded-full header-action-btn"
               onClick={() => setMobileMenuOpen(false)}
             >
               <svg
@@ -302,7 +306,7 @@ export default function Header() {
                 {item.type === "dropdown" ? (
                   <>
                     <button
-                      className="w-full flex items-center justify-between rounded-md px-4 py-3 text-left uppercase text-white"
+                      className="w-full flex items-center justify-between rounded-md px-4 py-3 text-left uppercase text-white header-action-btn"
                       onClick={() => toggleMobileDropdown(item.id)}
                     >
                       <span>{item.label}</span>
@@ -327,7 +331,7 @@ export default function Header() {
                             <Link
                               key={subItem.label}
                               href={subItem.href || "#"}
-                              className="block py-1 hover:text-white"
+                              className="block py-1 px-2 rounded header-action-btn text-white/90 hover:text-white"
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               {subItem.label}
@@ -348,8 +352,8 @@ export default function Header() {
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
                         className={`block w-full rounded-md px-4 py-3 text-left uppercase ${
-                          item.highlight ? "bg-[#cf7025]" : "bg-transparent"
-                        } text-white`}
+                          item.highlight ? "bg-[#cf7025]" : "header-action-btn"
+                        }`}
                       >
                         {item.label}
                       </Link>
@@ -400,9 +404,9 @@ export default function Header() {
               </div>
 
               {/* Right: Nav Elements + Search + Language */}
-              <div className="flex items-stretch gap-2 sm:gap-4 md:gap-6 lg:gap-8">
+              <div className="flex items-stretch gap-0.5 sm:gap-1 md:gap-2 lg:gap-3">
                 {/* Navigation Elements */}
-                <div className="flex items-stretch gap-1 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-6 text-[11px] font-semibold h-full">
+                <div className="flex items-stretch gap-0.5 sm:gap-1 md:gap-2 lg:gap-3 xl:gap-4 text-[11px] font-semibold h-full">
                   {/* Dropdown Buttons */}
                   {dropdownMenus.map((menu) => {
                     const isOpen = openMenuId === menu.id;
@@ -458,7 +462,7 @@ export default function Header() {
 
                 {/* Search Icon */}
                 <button
-                  className="flex items-center p-2 hover:bg-white/10 rounded transition-colors h-full"
+                  className="flex items-center p-2 header-action-btn rounded transition-colors h-full"
                   aria-label="Rechercher"
                   title="Rechercher"
                 >
@@ -478,11 +482,11 @@ export default function Header() {
                 </button>
 
                 {/* Language Switcher: FR EN */}
-                <div className="flex items-stretch gap-1 sm:gap-2 border-l border-white/50 pl-2 sm:pl-3 md:pl-4 text-[11px] font-semibold uppercase h-full">
-                  <button className="flex items-center px-1 sm:px-2 text-white hover:bg-white/10 rounded transition-colors h-full" aria-label="Français">
+                <div className="flex items-stretch gap-0.5 sm:gap-1 border-l border-white/50 pl-1 sm:pl-2 md:pl-3 text-[11px] font-semibold uppercase h-full">
+                  <button className="flex items-center px-1 sm:px-2 header-action-btn rounded transition-colors h-full" aria-label="Français">
                     FR
                   </button>
-                  <button className="flex items-center px-1 sm:px-2 text-white hover:bg-white/10 rounded transition-colors h-full" aria-label="English">
+                  <button className="flex items-center px-1 sm:px-2 header-action-btn rounded transition-colors h-full" aria-label="English">
                     EN
                   </button>
                 </div>
