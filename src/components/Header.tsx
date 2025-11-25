@@ -243,9 +243,9 @@ export default function Header() {
             <Image
               alt="Mobile Logo 2"
               src="/images/mobilelogo2.png"
-              width={200}
-              height={55}
-              className="object-contain w-[200px] h-auto"
+              width={170}
+              height={47}
+              className="object-contain w-[170px] h-auto"
             />
           </Link>
         </div>

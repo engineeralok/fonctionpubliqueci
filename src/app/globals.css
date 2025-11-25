@@ -606,6 +606,15 @@ footer::after {
     flex-direction: column;
     gap: 2rem;
   }
+
+  .footer-social {
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  .footer-social-icons {
+    justify-content: flex-start;
+  }
   
   .footer-institutional-links {
     flex-direction: column;
