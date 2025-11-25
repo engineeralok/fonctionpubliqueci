@@ -373,8 +373,8 @@ export default function Header() {
       {/* Desktop Header - Visible on desktop only */}
       <div className="desktop-header hidden lg:block w-full">
         {/* Logo Row - 90% width, logo 650px */}
-        <div className="bg-white py-4">
-          <div className="mx-auto" style={{ width: '90%' }}>
+        <div className="bg-white py-2 px-2 lg:px-2">
+          <div className="w-full max-w-[1250px]">
             <Link href="/">
               <Image
                 alt="Logo"
@@ -391,12 +391,12 @@ export default function Header() {
 
         {/* Navigation Bar Row - 90% width, orange background */}
         <nav 
-          className="bg-[#FF914D] flex items-center h-[44px] overflow-hidden" 
+          className="bg-[#FF914D] flex items-center h-[44px] overflow-hidden px-2 lg:px-2" 
           id="header-navigation-desktop" 
           role="navigation" 
           aria-label="Menu principal"
         >
-          <div className="mx-auto w-full" style={{ width: '90%' }}>
+          <div className="w-full max-w-[1250px]">
             <div className="flex items-stretch justify-between text-white h-full">
               {/* Left: Menu Title */}
               <div className="flex items-center text-[11px] font-semibold uppercase flex-shrink-0 pr-2 sm:pr-4">
