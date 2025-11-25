@@ -13,8 +13,8 @@ export default function FooterLogo() {
       <Image
         alt="Ministère de la Fonction publique et de la Réforme de l'État"
         src="/images/mobilelogo1.png"
-        width={280}
-        height={102}
+        width={300}
+        height={110}
         className="object-contain footer-logo footer-logo--mobile"
         priority
       />
