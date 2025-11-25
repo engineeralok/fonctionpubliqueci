@@ -241,7 +241,7 @@ export default function Header() {
 
         <div className="h-px bg-gray-200 mx-4" aria-hidden="true" />
 
-        <div className="mx-auto px-4 py-2 flex items-center" style={{ width: "100%" }}>
+        <div className="mx-auto px-4 py-2 flex items-center border-b border-gray-200" style={{ width: "100%" }}>
           <Link href="/" className="block">
             <Image
               alt="Mobile Logo 2"
