@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import ShareButtons from "@/components/ShareButtons";
 import CommuniquesSection from "@/components/CommuniquesSection";
 import ActualitesSection from "@/components/ActualitesSection";
 import PhotothequeSection from "@/components/PhotothequeSection";
@@ -37,52 +35,52 @@ const featuredArticles = [
   },
 ];
 
-const actionCards = [
-  {
-    title: "30 millions d’utilisateurs ont adopté FranceConnect !",
-    href: "https://www.transformation.gouv.fr/ministre/actualite/30-millions-dutilisateurs-ont-adopte-franceconnect",
-    image: "/transformation/images/action-1.png",
-    width: 358,
-    height: 200,
-    alt: "30 millions d’utilisateurs France Connect",
-  },
-  {
-    title: "Le Gouvernement soutient la transformation numérique des collectivités territoriales",
-    href: "https://www.transformation.gouv.fr/ministre/actualite/le-gouvernement-soutient-la-transformation-numerique-des-collectivites",
-    image: "/transformation/images/action-2.jpg",
-    width: 358,
-    height: 200,
-    alt: "France Relance Fonds Transformation numérique des territoires 88 M€ jusqu’en 2022",
-  },
-];
-
-
 const institutionalLinks = [
   "presidence.gouv.ci",
   "tresor.gouv.ci",
   "impots.gouv.ci",
 ];
 
-const footerBottomLinks = [
-  { label: "Données personnelles et cookies", href: "https://www.transformation.gouv.fr/donnees-personnelles-et-cookies" },
-  { label: "Contact presse", href: "https://www.transformation.gouv.fr/espace-presse/contact-presse" },
-  { label: "Mentions légales", href: "https://www.transformation.gouv.fr/mentions-legales" },
-  { label: "Accessibilité : partiellement conforme", href: "https://www.transformation.gouv.fr/accessibilite" },
-  { label: "Plan du site", href: "https://www.transformation.gouv.fr/sitemap" },
-];
+// Unused variables (commented out in JSX)
+// const actionCards = [
+//   {
+//     title: "30 millions d'utilisateurs ont adopté FranceConnect !",
+//     href: "https://www.transformation.gouv.fr/ministre/actualite/30-millions-dutilisateurs-ont-adopte-franceconnect",
+//     image: "/transformation/images/action-1.png",
+//     width: 358,
+//     height: 200,
+//     alt: "30 millions d'utilisateurs France Connect",
+//   },
+//   {
+//     title: "Le Gouvernement soutient la transformation numérique des collectivités territoriales",
+//     href: "https://www.transformation.gouv.fr/ministre/actualite/le-gouvernement-soutient-la-transformation-numerique-des-collectivites",
+//     image: "/transformation/images/action-2.jpg",
+//     width: 358,
+//     height: 200,
+//     alt: "France Relance Fonds Transformation numérique des territoires 88 M€ jusqu'en 2022",
+//   },
+// ];
 
-const followLinks = [
-  {
-    label: "Suivez-nous sur Facebook",
-    href: "https://fr-fr.facebook.com/StanGuerini",
-    className: "fr-btn fr-btn--facebook",
-  },
-  {
-    label: "Visiter la page Twitter",
-    href: "https://twitter.com/StanGuerini",
-    className: "fr-btn fr-btn--twitter-x",
-  },
-];
+// const footerBottomLinks = [
+//   { label: "Données personnelles et cookies", href: "https://www.transformation.gouv.fr/donnees-personnelles-et-cookies" },
+//   { label: "Contact presse", href: "https://www.transformation.gouv.fr/espace-presse/contact-presse" },
+//   { label: "Mentions légales", href: "https://www.transformation.gouv.fr/mentions-legales" },
+//   { label: "Accessibilité : partiellement conforme", href: "https://www.transformation.gouv.fr/accessibilite" },
+//   { label: "Plan du site", href: "https://www.transformation.gouv.fr/sitemap" },
+// ];
+
+// const followLinks = [
+//   {
+//     label: "Suivez-nous sur Facebook",
+//     href: "https://fr-fr.facebook.com/StanGuerini",
+//     className: "fr-btn fr-btn--facebook",
+//   },
+//   {
+//     label: "Visiter la page Twitter",
+//     href: "https://twitter.com/StanGuerini",
+//     className: "fr-btn fr-btn--twitter-x",
+//   },
+// ];
 
 export default function Home() {
   return (
@@ -251,7 +249,7 @@ export default function Home() {
                     <a href="#">Organigramme du MEMFPMA</a>
                   </li>
                   <li>
-                    <a href="#">Demande d'acte de non engagement</a>
+                    <a href="#">Demande d&apos;acte de non engagement</a>
                   </li>
                   <li>
                     <a href="#">Actes signés</a>

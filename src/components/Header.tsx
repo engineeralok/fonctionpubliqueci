@@ -97,6 +97,7 @@ function DropdownButton({
       </button>
       {isOpen && (
         <div
+          // eslint-disable-next-line react-hooks/refs
           ref={refs.setFloating}
           {...getFloatingProps()}
           id={`desktop-menu-${menu.id}`}
