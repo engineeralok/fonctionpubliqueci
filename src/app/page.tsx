@@ -267,14 +267,14 @@ export default function Home() {
                     <a href="#">Retraite / Radiation</a>
                   </li>
                 </ul>
-              </div>
+            </div>
               <div className="footer-services">
                 <h3 className="footer-services-title">Ressources</h3>
                 <ul className="footer-column-list">
                   <li>
                     <a href="#">Rubrique ressources</a>
                   </li>
-                </ul>
+              </ul>
               </div>
             </div>
             
@@ -322,7 +322,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
+            </div>
           <div className="footer-copyright">
             <p>Copyright • Confidentialité</p>
           </div>
