@@ -133,6 +133,36 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+.communicates-tabs-mobile {
+  display: none;
+}
+
+.communicates-tabs-mobile__btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #FF914D;
+}
+
+.communicates-tabs-mobile__label {
+  flex: 1;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #FF914D;
+  border-radius: 999px;
+  padding: 0.65rem 0.75rem;
+}
+
 .communicates-content {
   padding: 1rem;
 }
@@ -164,6 +194,19 @@ body {
 .communicates-content .fr-card--grey .urgent-card__link:hover,
 .communicates-content .fr-card--grey .fr-card__link.urgent-card__link:hover {
   color: #E67A3D !important;
+}
+
+@media (max-width: 768px) {
+  .communicates-tabs {
+    display: none;
+  }
+
+  .communicates-tabs-mobile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0 1rem;
+  }
 }
 
 .urgent-card__detail {

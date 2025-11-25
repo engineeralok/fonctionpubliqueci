@@ -24,6 +24,17 @@ const segments = [
 
 export default function CommuniquesSection({ articles }: { articles: Article[] }) {
   const [activeSegment, setActiveSegment] = useState("urgent");
+  const currentIndex = segments.findIndex((segment) => segment.id === activeSegment);
+
+  const handlePrevSegment = () => {
+    const prevIndex = (currentIndex - 1 + segments.length) % segments.length;
+    setActiveSegment(segments[prevIndex].id);
+  };
+
+  const handleNextSegment = () => {
+    const nextIndex = (currentIndex + 1) % segments.length;
+    setActiveSegment(segments[nextIndex].id);
+  };
 
   return (
     <section className="communicates-section">
@@ -38,19 +49,39 @@ export default function CommuniquesSection({ articles }: { articles: Article[] }
 
       <div className="communicates-box">
         <div className="communicates-tabs">
-            {segments.map((segment) => (
-              <button
-                key={segment.id}
-                className={`segment-button flex-1 px-4 py-3 text-sm font-semibold uppercase transition-colors ${
-                  activeSegment === segment.id
-                    ? "bg-[#FF914D] text-white"
-                    : "bg-white text-black"
-                }`}
-                onClick={() => setActiveSegment(segment.id)}
-              >
-                {segment.label}
-              </button>
-            ))}
+          {segments.map((segment) => (
+            <button
+              key={segment.id}
+              className={`segment-button flex-1 px-4 py-3 text-sm font-semibold uppercase transition-colors ${
+                activeSegment === segment.id ? "bg-[#FF914D] text-white" : "bg-white text-black"
+              }`}
+              onClick={() => setActiveSegment(segment.id)}
+            >
+              {segment.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="communicates-tabs-mobile" aria-label="Navigation des catégories">
+          <button
+            type="button"
+            className="communicates-tabs-mobile__btn"
+            onClick={handlePrevSegment}
+            aria-label="Catégorie précédente"
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div className="communicates-tabs-mobile__label" aria-live="polite">
+            {segments[currentIndex]?.label}
+          </div>
+          <button
+            type="button"
+            className="communicates-tabs-mobile__btn"
+            onClick={handleNextSegment}
+            aria-label="Catégorie suivante"
+          >
+            <span aria-hidden="true">›</span>
+          </button>
         </div>
 
         <div className="communicates-content">
