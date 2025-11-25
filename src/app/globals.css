@@ -452,6 +452,12 @@ footer::after {
   max-width: 400px;
 }
 
+.footer-logo {
+  width: 260px;
+  height: auto;
+  display: block;
+}
+
 .footer-services {
   margin-top: 1.5rem;
 }

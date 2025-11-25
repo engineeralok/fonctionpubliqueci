@@ -221,10 +221,10 @@ export default function Header() {
             <Image
               alt="Mobile Logo 1"
               src="/images/mobilelogo1.png"
-              width={317}
-              height={115}
+              width={260}
+              height={95}
               className="object-contain"
-              style={{ width: "317px", height: "auto" }}
+              style={{ width: "260px", height: "auto" }}
             />
           </Link>
           <button
@@ -243,9 +243,9 @@ export default function Header() {
             <Image
               alt="Mobile Logo 2"
               src="/images/mobilelogo2.png"
-              width={220}
-              height={60}
-              className="object-contain w-[220px] h-auto"
+              width={200}
+              height={55}
+              className="object-contain w-[200px] h-auto"
             />
           </Link>
         </div>

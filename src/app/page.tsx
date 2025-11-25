@@ -232,11 +232,12 @@ export default function Home() {
             <div className="footer-brand-section">
               <Link href="/" title="Ministère de la Fonction publique et de la Réforme de l'État - Retour à l'accueil du site">
                 <Image
-                  src="/images/mobilelogo1.png"
                   alt="Ministère de la Fonction publique et de la Réforme de l'État"
-                  width={222}
-                  height={81}
-                  className="footer-logo"
+                  src="/images/mobilelogo1.png"
+                  width={260}
+                  height={95}
+                  className="object-contain footer-logo"
+                  style={{ width: "260px", height: "auto" }}
                 />
               </Link>
               <div className="footer-services">
