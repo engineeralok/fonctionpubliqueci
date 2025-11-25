@@ -290,14 +290,31 @@ body {
   margin-bottom: 6rem;
 }
 
-.phototheque-image-col {
-  width: 60% !important;
-  flex: 0 0 60% !important;
+.phototheque-container {
+  display: flex;
+  flex-direction: column;
 }
 
+.phototheque-image-col,
 .phototheque-content-col {
-  width: 40% !important;
-  flex: 0 0 40% !important;
+  width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+@media (min-width: 768px) {
+  .phototheque-container {
+    flex-direction: row;
+  }
+  
+  .phototheque-image-col {
+    width: 60% !important;
+    flex: 0 0 60% !important;
+  }
+
+  .phototheque-content-col {
+    width: 40% !important;
+    flex: 0 0 40% !important;
+  }
 }
 
 .phototheque-image-placeholder {
@@ -598,19 +615,6 @@ footer::after {
 }
 
 @media (max-width: 768px) {
-  .phototheque-content-col {
-    width: 100% !important;
-    flex: 0 0 100% !important;
-    order: 1;
-  }
-
-  .phototheque-image-col {
-    width: 100% !important;
-    flex: 0 0 100% !important;
-    order: 2;
-    margin-top: 1rem;
-  }
-
   .footer-top-section {
     flex-direction: column;
   }
