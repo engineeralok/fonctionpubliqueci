@@ -215,7 +215,7 @@ export default function Header() {
   return (
     <header className="fr-header relative" role="banner">
       {/* Mobile & Tablet Header - Hidden on desktop */}
-      <div className="block lg:hidden bg-white border-b border-gray-200">
+      <div className="block lg:hidden bg-white">
         <div className="mx-auto px-4 py-2 flex items-center" style={{ width: "100%", position: "relative" }}>
           <Link href="/" className="block">
             <Image
@@ -228,16 +228,19 @@ export default function Header() {
             />
           </Link>
           <button
-            className="absolute top-2 right-4 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF914D] bg-white"
+            type="button"
+            className="absolute top-1 right-4 flex h-7 w-7 items-center justify-center rounded-lg p-1 outline outline-gray-400 focus:ring-2 focus:ring-[#FF914D]"
             aria-label="Ouvrir le menu"
+            aria-controls="header-navigation"
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(true)}
           >
-            <span className="block w-5 h-0.5 bg-black mb-1 rounded"></span>
-            <span className="block w-5 h-0.5 bg-black mb-1 rounded"></span>
-            <span className="block w-5 h-0.5 bg-black rounded"></span>
+            <Image src="/images/hamburger.svg" alt="Menu" width={24} height={24} />
           </button>
         </div>
-        <div className="h-px w-full bg-gray-300" />
+
+        <div className="h-px bg-gray-200 mx-4" aria-hidden="true" />
+
         <div className="mx-auto px-4 py-2 flex items-center" style={{ width: "100%" }}>
           <Link href="/" className="block">
             <Image
