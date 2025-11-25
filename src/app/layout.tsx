@@ -49,10 +49,10 @@ const cssLinks = [
 ];
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.transformation.gouv.fr"),
-  title: "Accueil | transformation.gouv.fr",
+  metadataBase: new URL("https://fonctionpublique.gouv.ci"),
+  title: "Accueil | fonctionpublique.gouv.ci",
   description:
-    "Site officiel du Ministère de la Fonction publique et de la Réforme de l’État.",
+    "Site officiel du Ministère de la Fonction publique et de la Modernisation de l’Administration.",
   alternates: {
     canonical: "/",
   },
@@ -74,7 +74,9 @@ export default function RootLayout({
         />
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="width" />
-        <link rel="icon" href="/transformation/favicon.ico" />
+        <link rel="icon" href="/images/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/favicon.png" />
         {cssLinks.map((link) => (
           <link key={link.href} rel="stylesheet" {...link} />
         ))}
