@@ -377,7 +377,7 @@ export default function Header() {
       <div className="desktop-header hidden lg:block w-full">
         {/* Logo Row - 90% width, logo 650px */}
         <div className="bg-white py-2 px-2 lg:px-2">
-          <div className="w-full max-w-[1250px]">
+          <div className="w-[95%] max-w-[1250px] mx-auto">
             <Link href="/">
               <Image
                 alt="Logo"
@@ -399,7 +399,7 @@ export default function Header() {
           role="navigation" 
           aria-label="Menu principal"
         >
-          <div className="w-full max-w-[1250px]">
+          <div className="w-[95%] max-w-[1250px] mx-auto">
             <div className="flex items-stretch justify-between text-white h-full">
               {/* Left: Menu Title */}
               <div className="flex items-center text-[11px] font-semibold uppercase flex-shrink-0 pr-2 sm:pr-4">
