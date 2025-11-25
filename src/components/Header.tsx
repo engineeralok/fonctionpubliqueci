@@ -229,7 +229,7 @@ export default function Header() {
           </Link>
           <button
             type="button"
-            className="absolute top-1 right-4 flex h-7 w-7 items-center justify-center rounded-lg p-1 outline outline-gray-400 focus:ring-2 focus:ring-[#FF914D]"
+            className="absolute top-1 mt-2 right-4 flex h-7 w-7 items-center justify-center rounded-sm p-1 outline outline-[2px] outline-[#9ca3af] focus:ring-2 focus:ring-[#FF914D]"
             aria-label="Ouvrir le menu"
             aria-controls="header-navigation"
             aria-expanded={mobileMenuOpen}
