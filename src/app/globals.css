@@ -513,9 +513,33 @@ footer::after {
 }
 
 .footer-logo {
-  width: 260px;
   height: auto;
   display: block;
+}
+
+.footer-logo--mobile {
+  width: 280px;
+}
+
+.footer-logo--desktop {
+  width: 360px;
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .footer-logo--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-logo--mobile {
+    display: none;
+  }
+
+  .footer-logo--desktop {
+    display: block;
+  }
 }
 
 .footer-services {

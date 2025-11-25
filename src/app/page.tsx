@@ -4,6 +4,7 @@ import ShareButtons from "@/components/ShareButtons";
 import CommuniquesSection from "@/components/CommuniquesSection";
 import ActualitesSection from "@/components/ActualitesSection";
 import PhotothequeSection from "@/components/PhotothequeSection";
+import FooterLogo from "@/components/FooterLogo";
 
 const featuredArticles = [
   {
@@ -230,16 +231,7 @@ export default function Home() {
         <div className="fr-container">
           <div className="footer-top-section">
             <div className="footer-brand-section">
-              <Link href="/" title="Ministère de la Fonction publique et de la Réforme de l'État - Retour à l'accueil du site">
-                <Image
-                  alt="Ministère de la Fonction publique et de la Réforme de l'État"
-                  src="/images/mobilelogo1.png"
-                  width={260}
-                  height={95}
-                  className="object-contain footer-logo"
-                  style={{ width: "260px", height: "auto" }}
-                />
-              </Link>
+              <FooterLogo />
               <div className="footer-services">
                 <h3 className="footer-services-title">Le Ministère</h3>
                 <ul className="footer-column-list">

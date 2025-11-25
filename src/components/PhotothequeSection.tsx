@@ -6,7 +6,7 @@ export default function PhotothequeSection() {
   return (
     <section className="phototheque-section fr-mt-6w">
       <div className="fr-grid-row fr-grid-row--gutters phototheque-container">
-        <div className="fr-col-12 phototheque-image-col order-2 md:order-1">
+        <div className="fr-col-12 phototheque-image-col">
           <div className="phototheque-image-placeholder">
             <Image
               src="/images/photo.jpeg"
@@ -17,7 +17,7 @@ export default function PhotothequeSection() {
             />
           </div>
         </div>
-        <div className="fr-col-12 phototheque-content-col order-1 md:order-2">
+        <div className="fr-col-12 phototheque-content-col">
           <div className="phototheque-content">
             <h2 className="phototheque-title">
               <span className="underline">Photothèque</span>
