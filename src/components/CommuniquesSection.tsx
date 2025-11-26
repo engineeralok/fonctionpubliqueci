@@ -41,9 +41,9 @@ export default function CommuniquesSection({ articles }: { articles: Article[] }
         <h2>
           <span className="underline">Les communiqués</span>
         </h2>
-        <a className="communicates-cta" href="https://www.transformation.gouv.fr/ministre/actualite">
+        <span className="communicates-cta communicates-cta--disabled" aria-disabled="true">
           Voir tout
-        </a>
+        </span>
       </div>
 
       <div className="communicates-box">
@@ -92,12 +92,12 @@ export default function CommuniquesSection({ articles }: { articles: Article[] }
                     <div className="fr-card__body">
                       <div className="fr-card__content">
                         <h3 className="fr-card__title">
-                          <a
-                            href={article.href}
-                            className={`fr-card__link ${article.isUrgent ? "urgent-card__link" : ""}`}
+                          <span
+                            className={`fr-card__link fr-card__link--disabled ${article.isUrgent ? "urgent-card__link" : ""}`}
+                            aria-disabled="true"
                           >
                             {article.title}
-                          </a>
+                          </span>
                         </h3>
                         <div className="fr-card__start">
                           <p className={`fr-card__detail ${article.isUrgent ? "urgent-card__detail" : ""}`}>{article.detail}</p>

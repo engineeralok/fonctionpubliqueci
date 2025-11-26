@@ -123,6 +123,21 @@ body {
   text-decoration: none;
 }
 
+.communicates-cta--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.fr-card__link--disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.75;
+  color: inherit !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
 .communicates-box {
   background-color: #fff;
   border-radius: 8px;
