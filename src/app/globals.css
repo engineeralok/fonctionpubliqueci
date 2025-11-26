@@ -573,7 +573,7 @@ footer::after {
 }
 
 .footer-logo--mobile {
-  width: 300px;
+  display: none !important;
 }
 
 .footer-logo--desktop {
