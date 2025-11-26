@@ -48,17 +48,17 @@ export default function CommuniquesSection({ articles }: { articles: Article[] }
 
       <div className="communicates-box">
         <div className="communicates-tabs">
-          {segments.map((segment) => (
-            <button
-              key={segment.id}
-              className={`segment-button flex-1 px-4 py-3 text-sm font-semibold uppercase transition-colors ${
+            {segments.map((segment) => (
+              <button
+                key={segment.id}
+                className={`segment-button flex-1 px-4 py-3 text-sm font-semibold uppercase transition-colors ${
                 activeSegment === segment.id ? "bg-[#FF914D] text-white" : "bg-white text-black"
-              }`}
-              onClick={() => setActiveSegment(segment.id)}
-            >
-              {segment.label}
-            </button>
-          ))}
+                }`}
+                onClick={() => setActiveSegment(segment.id)}
+              >
+                {segment.label}
+              </button>
+            ))}
         </div>
 
         <div className="communicates-tabs-mobile" aria-label="Navigation des catégories">

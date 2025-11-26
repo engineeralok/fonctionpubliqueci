@@ -65,8 +65,8 @@ export default function ContactPage() {
               </button>
             </form>
           </div>
-        </section>
-      </main>
+      </section>
+    </main>
 
       <footer className="fr-footer custom-footer" role="contentinfo" id="footer">
         <div className="fr-container">
