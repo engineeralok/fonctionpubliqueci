@@ -234,7 +234,7 @@ export default function Home() {
                 <h3 className="footer-services-title">Le Ministère</h3>
                 <ul className="footer-column-list">
                   <li>
-                    <a href="#">Le Ministre</a>
+                    <a href="/le-ministre">Le Ministre</a>
                   </li>
                   <li>
                     <a href="#">Organisation du Ministère</a>

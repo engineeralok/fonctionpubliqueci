@@ -151,7 +151,7 @@ export default function Header() {
       label: "Le Ministère",
       minWidth: "350px",
       items: [
-        { label: "Le Ministre", href: "#" },
+        { label: "Le Ministre", href: "/le-ministre" },
         { label: "Organisation du Ministère", href: "#" },
         { label: "Direction Générale de la Fonction Publique", href: "#" },
         { label: "Direction Générale de la Transformation de Service Publique", href: "#" },
