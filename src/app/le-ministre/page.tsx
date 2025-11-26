@@ -51,7 +51,7 @@ function MinisterCard({ minister }: { minister: Minister }) {
 
       {/* Information in the middle after the frame */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-serif text-charcoal mb-4">
+        <h2 className="text-3xl md:text-4xl font-albertus-bold text-charcoal mb-4">
           {minister.name}
         </h2>
         <p className="text-xl text-charcoal mb-2">
@@ -64,7 +64,7 @@ function MinisterCard({ minister }: { minister: Minister }) {
 
       {/* Biography in the middle */}
       <div className="max-w-3xl mx-auto prose prose-lg">
-        <h2 className="text-2xl md:text-3xl font-serif text-charcoal mb-6 text-center">
+        <h2 className="text-2xl md:text-3xl font-albertus-bold text-charcoal mb-6 text-center">
           Biographie
         </h2>
         <div className="text-charcoal text-base leading-relaxed space-y-4">
@@ -86,7 +86,7 @@ export default function LeMinistrePage() {
             <div className="relative z-10 px-6 py-8 sm:px-10 lg:px-12 lg:py-12">
               {/* Title on the left */}
               <div className="mb-8">
-                <h1 className="text-3xl font-serif leading-tight text-white sm:text-4xl lg:text-5xl">
+                <h1 className="text-3xl font-albertus-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                   Le Ministre
                 </h1>
               </div>
