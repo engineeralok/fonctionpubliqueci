@@ -376,16 +376,15 @@ export default function Header() {
 
       {/* Desktop Header - Visible on desktop only */}
       <div className="desktop-header hidden lg:block w-full">
-        {/* Logo Row - 90% width, logo 650px */}
+        {/* Logo Row - 95% width, responsive logo */}
         <div className="bg-white py-2 px-2 lg:px-2">
-          <div className="w-[95%] max-w-[1250px] mx-auto">
-            <Link href="/">
+          <div className="w-[95%] mx-auto">
+            <Link href="/" className="block">
               <Image
                 alt="Logo"
                 width={650}
                 height={212}
-                className="object-contain"
-                style={{ width: '650px', height: 'auto' }}
+                className="object-contain w-full max-w-[650px] h-auto"
                 src="/images/logo.png"
                 priority
               />
@@ -400,7 +399,7 @@ export default function Header() {
           role="navigation" 
           aria-label="Menu principal"
         >
-          <div className="w-[95%] max-w-[1250px] mx-auto">
+          <div className="w-[90%] max-w-[1250px] mx-auto">
             <div className="flex items-stretch justify-between text-white h-full">
               {/* Left: Menu Title */}
               <div className="flex items-center text-[11px] font-semibold uppercase flex-shrink-0 pr-2 sm:pr-4">

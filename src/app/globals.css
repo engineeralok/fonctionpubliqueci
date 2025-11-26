@@ -79,6 +79,23 @@ body {
   .desktop-header {
     display: block !important;
   }
+  /* Responsive desktop logo size */
+  .desktop-header img[alt="Logo"] {
+    max-width: 650px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  /* Scale logo on very large screens */
+  @media (min-width: 1400px) {
+    .desktop-header img[alt="Logo"] {
+      max-width: 750px !important;
+    }
+  }
+  @media (min-width: 1600px) {
+    .desktop-header img[alt="Logo"] {
+      max-width: 850px !important;
+    }
+  }
 }
 
 .segment-button:hover {
