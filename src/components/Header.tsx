@@ -114,22 +114,34 @@ function DropdownButton({
                   return (
                     <div
                       key={index}
-                      className="px-4 py-2 flex items-center justify-between header-action-btn text-white whitespace-nowrap cursor-pointer"
+                      className="px-4 py-2 flex items-center justify-between header-action-btn text-white whitespace-nowrap cursor-not-allowed opacity-75"
                     >
                       <span>{item.label}</span>
                       <ArrowIcon />
                     </div>
                   );
                 }
+                // Only "Le Ministre" link should be clickable
+                if (item.href === "/le-ministre") {
+                  return (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className="px-4 py-2 header-action-btn text-white whitespace-nowrap"
+                      onClick={() => onOpenChange(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                }
+                // All other items are non-clickable
                 return (
-                  <Link
+                  <span
                     key={index}
-                    href={item.href || "#"}
-                    className="px-4 py-2 header-action-btn text-white whitespace-nowrap"
-                    onClick={() => onOpenChange(false)}
+                    className="px-4 py-2 header-action-btn text-white whitespace-nowrap cursor-not-allowed opacity-75"
                   >
                     {item.label}
-                  </Link>
+                  </span>
                 );
               })}
             </div>
@@ -326,20 +338,27 @@ export default function Header() {
                           subItem.hasArrow ? (
                             <div
                               key={subItem.label}
-                              className="flex items-center justify-between py-1 text-white/90"
+                              className="flex items-center justify-between py-1 text-white/90 cursor-not-allowed opacity-75"
                             >
                               <span>{subItem.label}</span>
                               <ArrowIcon className="h-3 w-3" />
                             </div>
-                          ) : (
+                          ) : subItem.href === "/le-ministre" ? (
                             <Link
                               key={subItem.label}
-                              href={subItem.href || "#"}
+                              href={subItem.href}
                               className="block py-1 px-2 rounded header-action-btn text-white/90 hover:text-white"
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               {subItem.label}
                             </Link>
+                          ) : (
+                            <span
+                              key={subItem.label}
+                              className="block py-1 px-2 rounded text-white/90 cursor-not-allowed opacity-75"
+                            >
+                              {subItem.label}
+                            </span>
                           )
                         )}
                       </div>
@@ -347,11 +366,7 @@ export default function Header() {
                   </>
                 ) : (
                   <>
-                    {item.disabled ? (
-                      <span className="block w-full rounded-md px-4 py-3 text-left uppercase text-white/50">
-                        {item.label}
-                      </span>
-                    ) : (
+                    {item.href === "/contact" ? (
                       <Link
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
@@ -361,6 +376,10 @@ export default function Header() {
                       >
                         {item.label}
                       </Link>
+                    ) : (
+                      <span className="block w-full rounded-md px-4 py-3 text-left uppercase text-white/75 cursor-not-allowed opacity-75">
+                        {item.label}
+                      </span>
                     )}
                     {item.id === "mobile-ecrire" && <div className="h-px bg-white/30 mt-3" />}
                   </>
@@ -430,29 +449,26 @@ export default function Header() {
                     );
                   })}
 
-                  {/* SIGFAE - No arrow */}
-                  <Link
-                    href="#"
-                    className="nav-link flex items-center text-white hover:text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full"
+                  {/* SIGFAE - No arrow - Non-clickable */}
+                  <span
+                    className="nav-link flex items-center text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full cursor-not-allowed opacity-75"
                   >
                     SIGFAE
-                  </Link>
+                  </span>
 
-                  {/* Rubrique ressources - No arrow */}
-                  <Link
-                    href="#"
-                    className="nav-link flex items-center text-white hover:text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full whitespace-nowrap"
+                  {/* Rubrique ressources - No arrow - Non-clickable */}
+                  <span
+                    className="nav-link flex items-center text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full whitespace-nowrap cursor-not-allowed opacity-75"
                   >
                     Rubrique ressources
-                  </Link>
+                  </span>
 
-                  {/* Espace fonctionnaire - No arrow */}
-                  <Link
-                    href="#"
-                    className="nav-link flex items-center text-white hover:text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full whitespace-nowrap"
+                  {/* Espace fonctionnaire - No arrow - Non-clickable */}
+                  <span
+                    className="nav-link flex items-center text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full whitespace-nowrap cursor-not-allowed opacity-75"
                   >
                     Espace fonctionnaire
-                  </Link>
+                  </span>
 
                   {/* Écrire au Ministre - No arrow */}
                   <Link
