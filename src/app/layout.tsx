@@ -52,9 +52,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://fonctionpublique.gouv.ci"),
   title: "Accueil | fonctionpublique.gouv.ci",
   description:
-    "Site officiel du Ministère de la Fonction publique et de la Modernisation de l’Administration.",
+    "Site officiel du Ministère de la Fonction publique et de la Modernisation de l'Administration.",
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
   },
 };
 
@@ -74,9 +79,20 @@ export default function RootLayout({
         />
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="width" />
+        {/* Standard favicon */}
         <link rel="icon" href="/images/favicon.png" type="image/png" />
         <link rel="shortcut icon" href="/images/favicon.png" type="image/png" />
+        {/* Apple touch icon for iOS devices */}
         <link rel="apple-touch-icon" href="/images/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
+        {/* Android Chrome icons */}
+        <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon.png" />
+        {/* Windows tiles */}
+        <meta name="msapplication-TileImage" content="/images/favicon.png" />
+        <meta name="msapplication-TileColor" content="#FF914D" />
+        {/* Theme color for mobile browsers */}
+        <meta name="theme-color" content="#FF914D" />
         {cssLinks.map((link) => (
           <link key={link.href} rel="stylesheet" {...link} />
         ))}
