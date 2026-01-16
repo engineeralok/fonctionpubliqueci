@@ -24,7 +24,7 @@ body {
 .node--type-accueil h1 {
   white-space: nowrap;
   overflow: hidden;
-  font-size: 2.3rem;
+  font-size: 2.17rem;
   width: 100%;
   max-width: none;
   margin: 0;
@@ -35,7 +35,7 @@ body {
   .node--type-accueil h1 {
     white-space: normal;
     overflow: visible;
-    font-size: clamp(1.35rem, 5vw, 2.1rem);
+    font-size: clamp(1.2rem, 4vw, 1.65rem);
     line-height: 1.3;
     word-wrap: break-word;
     hyphens: auto;
@@ -45,7 +45,7 @@ body {
 /* Extra small screens - ensure text is always visible */
 @media (max-width: 480px) {
   .node--type-accueil h1 {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     white-space: normal;
     overflow: visible;
     line-height: 1.4;
