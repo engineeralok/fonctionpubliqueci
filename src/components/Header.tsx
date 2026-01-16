@@ -229,7 +229,7 @@ export default function Header() {
     <header className="fr-header relative" role="banner">
       {/* Mobile & Tablet Header - Hidden on desktop */}
       <div className="block lg:hidden bg-white">
-        <div className="mx-auto px-4 py-2 flex items-center" style={{ width: "100%", position: "relative" }}>
+        <div className="mx-auto px-4 pt-[10px] pb-2 flex items-center" style={{ width: "100%", position: "relative" }}>
           <Link href="/" className="logo-link" aria-label="Retour à l'accueil">
             <Image
               alt="Mobile Logo 1"
@@ -255,7 +255,7 @@ export default function Header() {
 
         <div className="h-px bg-gray-200 mx-4" aria-hidden="true" />
 
-        <div className="mx-auto px-4 py-2 flex items-center border-b border-gray-200" style={{ width: "100%" }}>
+        <div className="mx-auto px-4 pt-[10px] pb-2 flex items-center border-b border-gray-200" style={{ width: "100%" }}>
           <Link href="/" className="logo-link" aria-label="Retour à l'accueil">
             <Image
               alt="Mobile Logo 2"
@@ -397,7 +397,7 @@ export default function Header() {
       {/* Desktop Header - Visible on desktop only */}
       <div className="desktop-header hidden lg:block w-full">
         {/* Logo Row - 95% width, responsive logo */}
-        <div className="bg-white py-2 px-2 lg:px-2">
+        <div className="bg-white pt-[15px] pb-2 px-2 lg:px-2">
           <div className="w-[95%] mx-auto">
             <Link href="/" className="logo-link" aria-label="Retour à l'accueil">
               <Image
