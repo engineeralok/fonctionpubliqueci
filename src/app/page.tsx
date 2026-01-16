@@ -105,6 +105,15 @@ export default function Home() {
       <main role="main">
         <a id="contenu" tabIndex={-1}></a>
         
+        {/* Hero Heading */}
+        <div className="fr-container">
+          <div className="fr-grid-row">
+            <div className="fr-col-12">
+              <h1 className="fr-mt-8w hero-heading">La fonction publique, une administration qui vous écoute à tout moment</h1>
+            </div>
+          </div>
+        </div>
+
         {/* Hero Image - Full Width */}
         <div className="w-full">
           <Image
@@ -122,7 +131,6 @@ export default function Home() {
             <div className="fr-col-12">
               <article className="node node--type-accueil node--promoted node--view-mode-full fr-mt-8w">
                 <div className="node__content">
-                  <h1>La fonction publique, une administration qui vous écoute à tout moment</h1>
                   <div className="node__content">
 
                     <CommuniquesSection articles={featuredArticles} />
