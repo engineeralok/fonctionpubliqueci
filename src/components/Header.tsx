@@ -243,6 +243,7 @@ export default function Header() {
           <button
             type="button"
             className="absolute top-1 mt-2 right-4 flex h-7 w-7 items-center justify-center rounded-sm p-1 outline outline-[2px] outline-[#9ca3af] focus:ring-2 focus:ring-[#FF914D]"
+            style={{ boxShadow: "0px 4px 12px 0px rgba(0, 0, 0, 0.15), 0px 4px 12px 0px rgba(0, 0, 0, 0.15), 0px 4px 12px 0px rgba(0, 0, 0, 0.15)" }}
             aria-label="Ouvrir le menu"
             aria-controls="header-navigation"
             aria-expanded={mobileMenuOpen}
@@ -417,6 +418,11 @@ export default function Header() {
           id="header-navigation-desktop" 
           role="navigation" 
           aria-label="Menu principal"
+          style={{ 
+            backgroundColor: "rgba(247, 138, 0, 1)",
+            borderColor: "rgba(0, 0, 0, 0)",
+            borderImage: "none"
+          }}
         >
           <div className="w-[90%] max-w-[1250px] mx-auto">
             <div className="flex items-stretch justify-between text-white h-full">
@@ -465,7 +471,7 @@ export default function Header() {
 
                   {/* Espace fonctionnaire - No arrow - Non-clickable */}
                   <span
-                    className="nav-link flex items-center text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-full whitespace-nowrap cursor-not-allowed opacity-75"
+                    className="nav-link flex items-center text-white px-1 sm:px-2 md:px-3 rounded transition-colors h-[44px] w-[126px] pt-3 pb-3 whitespace-nowrap cursor-not-allowed font-medium leading-5"
                   >
                     Espace fonctionnaire
                   </span>
