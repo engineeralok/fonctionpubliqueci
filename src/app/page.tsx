@@ -104,22 +104,26 @@ export default function Home() {
 
       <main role="main">
         <a id="contenu" tabIndex={-1}></a>
+        
+        {/* Hero Image - Full Width */}
+        <div className="w-full">
+          <Image
+            src="/images/FDF3D165-D02E-4A6B-9463-C761BD2C21D9.jpeg"
+            alt="La fonction publique, cette administration a votre écoute"
+            width={1920}
+            height={800}
+            priority
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
         <div className="fr-container">
           <div className="fr-grid-row">
             <div className="fr-col-12">
               <article className="node node--type-accueil node--promoted node--view-mode-full fr-mt-8w">
                 <div className="node__content">
-                  <h1>La fonction publique, cette administration a votre écoute</h1>
+                  <h1>La fonction publique, une administration qui vous écoute à tout moment</h1>
                   <div className="node__content">
-                    <div className="fr-mt-3w fr-mb-6w">
-                      <Image
-                        src="/images/FDF3D165-D02E-4A6B-9463-C761BD2C21D9.jpeg"
-                        alt="La fonction publique, cette administration a votre écoute"
-                        width={1200}
-                        height={470}
-                        priority
-                      />
-                    </div>
 
                     <CommuniquesSection articles={featuredArticles} />
 
