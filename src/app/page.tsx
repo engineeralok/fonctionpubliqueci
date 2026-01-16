@@ -113,7 +113,7 @@ export default function Home() {
                   <div className="node__content">
                     <div className="fr-mt-3w fr-mb-6w">
                       <Image
-                        src="/images/hero.jpeg"
+                        src="/images/FDF3D165-D02E-4A6B-9463-C761BD2C21D9.jpeg"
                         alt="La fonction publique, cette administration a votre écoute"
                         width={1200}
                         height={470}
